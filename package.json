@@ -30,7 +30,12 @@
     "changelog": "conventional-changelog -n ./config/conventionalChangelog/config.js -i changelog.md -s",
     "bump": "if [ -z $npm_config_level ]; then grunt bump:minor;  else grunt bump:$npm_config_level; fi && npm run changelog && npm install && git add -A && git commit --amend --no-edit",
     "publish-next": "npm version prerelease --preid next && npm publish --access public --tag=next --provenance",
-    "publish-latest": "npm publish --access public --tag=latest --provenance"
+    "publish-latest": "npm publish --access public --tag=latest --provenance",
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist" 
+  
+
   },
   "nyc": {
     "exclude": [
@@ -97,6 +102,7 @@
     "eslint-import-resolver-webpack": "^0.13.2",
     "eslint-plugin-import": "^2.27.5",
     "eslint-webpack-plugin": "^4.0.1",
+    "gh-pages": "^6.1.0",
     "github-url-from-git": "^1.5.0",
     "grunt": "^1.6.1",
     "grunt-bump": "^0.8.0",
