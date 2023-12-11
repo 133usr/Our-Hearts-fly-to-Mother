@@ -32,7 +32,7 @@
     "publish-next": "npm version prerelease --preid next && npm publish --access public --tag=next --provenance",
     "publish-latest": "npm publish --access public --tag=latest --provenance",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --add '!node_modules' --remove '**/*'"
+    "deploy": "gh-pages -d dist --exclude node_modules" 
   },
   "nyc": {
     "exclude": [
