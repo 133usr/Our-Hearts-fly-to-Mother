@@ -31,11 +31,8 @@
     "bump": "if [ -z $npm_config_level ]; then grunt bump:minor;  else grunt bump:$npm_config_level; fi && npm run changelog && npm install && git add -A && git commit --amend --no-edit",
     "publish-next": "npm version prerelease --preid next && npm publish --access public --tag=next --provenance",
     "publish-latest": "npm publish --access public --tag=latest --provenance",
-
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist" 
-  
-
+    "deploy": "gh-pages -d dist"
   },
   "nyc": {
     "exclude": [
@@ -53,13 +50,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iTowns/itowns.git"
+    "url": "git+https://github.com/133usr/Our-Hearts-fly-to-Mother.git"
   },
-  "license": "(CECILL-B OR MIT)",
-  "bugs": {
-    "url": "https://github.com/iTowns/itowns/issues"
-  },
-  "homepage": "https://itowns.github.io/",
   "dependencies": {
     "@loaders.gl/las": "^3.4.4",
     "@mapbox/mapbox-gl-style-spec": "^13.28.0",
